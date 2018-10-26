@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="root" minHeight="600.0" minWidth="600.0" prefHeight="1000.0" prefWidth="1000.0" styleClass="root" stylesheets="@../css/showPage.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Java.controllers.ShowPageController">
+   <children>
+      <ScrollPane fx:id="mainScrollPane" cacheShape="false" fitToWidth="true" focusTraversable="false" hbarPolicy="NEVER" minHeight="100.0" minWidth="100.0" pannable="true" prefHeight="100.0" prefWidth="100.0" AnchorPane.bottomAnchor="-10.0" AnchorPane.leftAnchor="-10.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="30.0">
+         <content>
+          <AnchorPane fx:id="rootContainer" minHeight="100.0" minWidth="1000.0">
+               <children>
+                  <AnchorPane fx:id="backgroundImageUnderlay" cacheShape="false" layoutX="10.0" layoutY="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <effect>
+                        <ColorAdjust brightness="-0.5" />
+                     </effect>
+                  </AnchorPane>
+                  <AnchorPane fx:id="backgroundImage" cacheShape="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <effect>
+                        <ColorAdjust brightness="-0.5" />
+                     </effect>
+                  </AnchorPane>
+                  <AnchorPane fx:id="backgroundImageOverlay" cacheShape="false" layoutX="10.0" layoutY="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <effect>
+                        <ColorAdjust brightness="-0.5" />
+                     </effect>
+                  </AnchorPane>
+                  <AnchorPane minHeight="100.0" minWidth="500.0" styleClass="showTransparentBackground" translateY="-20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="630.0">
+                     <children>
+                        <VBox fx:id="mainContainer" minWidth="500.0" prefHeight="200.0" prefWidth="300.0" styleClass="mainContainer" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="320.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Text fx:id="plot" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                                 <VBox.margin>
+                                    <Insets bottom="30.0" left="20.0" right="100.0" top="20.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <VBox fx:id="episodeContainer" alignment="TOP_CENTER" minWidth="600.0">
+                                 <children>
+                                    <FlowPane fx:id="folderContainer" hgap="10.0" prefWrapLength="0.0" rowValignment="TOP" vgap="10.0">
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </FlowPane>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="20.0" />
+                           </padding>
+                        </VBox>
+                        <VBox fx:id="sidebarContainer" maxWidth="320.0" minWidth="320.0" prefWidth="320.0" spacing="10.0" styleClass="sidebarContainer" AnchorPane.bottomAnchor="20.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane maxWidth="320.0" minHeight="100.0" minWidth="320.0" prefHeight="200.0" prefWidth="320.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <ImageView fx:id="cover" fitHeight="402.0" fitWidth="310.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true" x="25.0" y="-40.0" AnchorPane.leftAnchor="0.0">
+                                       <image>
+                                          <Image url="@../images/empty.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="160.0" top="10.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </AnchorPane>
+                              <Label text="Title:" textFill="WHITE">
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="Noto Mono" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="title" text="Title" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font name="Noto Sans Bold" size="20.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="dateLabel" text="Air Date:" textFill="WHITE">
+                                 <font>
+                                    <Font name="Noto Mono" size="20.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="date" text="2017:" textFill="WHITE">
+                                 <font>
+                                    <Font name="Noto Mono" size="20.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="ratingLabel" text="Rating:" textFill="WHITE">
+                                 <font>
+                                    <Font name="Noto Mono" size="20.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="rating" text="7.0" textFill="WHITE">
+                                 <font>
+                                    <Font name="Noto Mono" size="20.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="ageRatingLabel" text="Age Rating:" textFill="WHITE">
+                                 <font>
+                                    <Font name="Noto Mono" size="20.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="ageRating" text="PG" textFill="WHITE">
+                                 <font>
+                                    <Font name="Noto Mono" size="20.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="studioLabel" text="Studio:" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font name="Noto Mono" size="20.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </Label>
+                              <Button fx:id="studio" mnemonicParsing="false" text="Button">
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Label fx:id="recommendationsLabel" cacheShape="false" centerShape="false" text="Recommendations:" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font name="Noto Mono" size="20.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </Label>
+                              <VBox fx:id="recommendations">
+                                 <VBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </VBox.margin>
+                              </VBox>
+                              <Label fx:id="tagsLabel" text="Tags:" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font name="Noto Mono" size="20.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </Label>
+                              <FlowPane fx:id="tags" hgap="5.0" prefHeight="200.0" prefWidth="200.0" vgap="5.0" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="10.0" />
+                                 </padding>
+                              </FlowPane>
+                           </children>
+                           <padding>
+                              <Insets bottom="20.0" top="-170.0" />
+                           </padding>
+                        </VBox>
+                        <StackPane layoutY="-129.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-100.0">
+                           <children>
+                              <Text fx:id="mainTitle" fill="WHITE" strokeType="INSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" translateX="150.0" StackPane.alignment="CENTER">
+                                 <font>
+                                    <Font name="Noto Sans" size="74.0" />
+                                 </font>
+                                 <StackPane.margin>
+                                    <Insets />
+                                 </StackPane.margin>
+                              </Text>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </content></ScrollPane>
+      <AnchorPane fx:id="menuContainer" focusTraversable="true" layoutX="-5.0" prefHeight="40.0" prefWidth="200.0" styleClass="menuContainer" AnchorPane.leftAnchor="-5.0" AnchorPane.rightAnchor="-3.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox id="header-background" prefHeight="10.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fx:id="menuBack" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <image>
+                        <Image url="@../icons/back_arrow.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fx:id="menuAll" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <image>
+                        <Image url="@../icons/all.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="15.0" right="15.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fx:id="menuWatching" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <image>
+                        <Image url="@../icons/favorite_border.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="15.0" right="15.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fx:id="menuFolder" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <image>
+                        <Image url="@../icons/folder.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="15.0" right="15.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fx:id="menuWikipedia" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <image>
+                        <Image url="@../icons/wikipedia.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="15.0" right="15.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fx:id="menuMal" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <image>
+                        <Image url="@../icons/mal.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <ImageView fx:id="menuUpdate" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="0.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <image>
+                  <Image url="@../icons/update.png" />
+               </image>
+            </ImageView>
+         </children>
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+         <effect>
+            <DropShadow offsetY="3.0" />
+         </effect>
+      </AnchorPane>
+      <Button fx:id="navigationArrow" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="25.0">
+         <effect>
+            <DropShadow color="#00000080" offsetY="3.0" />
+         </effect></Button>
+   </children>
+</AnchorPane>

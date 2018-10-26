@@ -1,0 +1,267 @@
+.root {
+        background-color: #000;
+        background-gradient-color-top: #3c3c45;
+		background-gradient-color-bottom: #7e3e3e;
+        text-color:#fff;
+        text-color-highlight:#d09a58;
+        primary-color:#ffffff;
+        primary-color-light:#616161;
+        primary-color-dark:#212121;
+        accent-color: #c16363;
+        accent-color-dark: #964c4c;
+        tag-container-color: #53535f;
+        tag-text-color: #ffffff;
+        tag-background-color: #2b2b31;
+        tag-background-color-hover: #7e3e3e;
+        tag-background-color-selected: #ab4747;
+        anime-container-text-title-color: #ffffff;
+        sidebar-color:  rgba(87, 44, 44, .85);
+        sidebar-text-color: #ffffff;
+        show-info-background-color:#3c3c45;
+        show-info-main-container-text-color: #ffffff;
+        episode-container-dark: #34343b;
+        episode-container-light: #53535f;
+        show-container-label-bg-color: #c16363;
+        show-container-label-text-color: #ffffff;
+        show-container-color: #3c3c45;
+        watching-container-link-text-color: #ffffff;
+        watching-container-link-hover-text-color: #c6c4c4;
+        recommended-missing-text-color: #d4c675;
+}
+
+
+#rootContainer {
+    -fx-text-fill: text-color;
+}
+
+
+#root {
+    -fx-background: background-gradient-color-bottom;
+        -fx-background-image: url("../../resources/icons/noise_light.png");
+
+}
+
+#showContainerRoot {
+    -fx-background-color: linear-gradient(from 0% 50% to 0% 100%, background-gradient-color-top, background-gradient-color-bottom);
+    -fx-background-image: url("../../resources/icons/noise_light.png");
+
+}
+
+#showContainerTitle {
+    -fx-background-color: show-container-label-bg-color;
+    -fx-text-fill: show-container-label-text-color;
+    -fx-background-image: url("../../resources/icons/noise_light.png");
+}
+
+#showContainer {
+    -fx-background-color: show-container-color;
+    -fx-background-image: url("../../resources/icons/noise_light.png");
+}
+
+
+.scroll-pane{
+   -fx-background-color:transparent;
+}
+
+.scroll-pane > .viewport {
+   -fx-background-color: transparent;
+}
+
+.mainContainer .label {
+-fx-text-fill: show-info-main-container-text-color;
+}
+
+.sidebarContainer .label {
+    -fx-text-fill: sidebar-text-color;
+}
+
+.showTitle {
+    -fx-fill: text-color;
+}
+
+
+.button {
+    -fx-text-fill: text-color;
+    -fx-background-image: url("../../resources/icons/noise_light.png");
+}
+
+#genreTagFlowContainer, #studioTagFlowContainer{
+    -fx-background-color: tag-container-color;
+    -fx-background-image: url("../../resources/icons/noise_light.png");
+
+}
+
+#genreTagFlowContainer .button, #studioTagFlowContainer .button {
+    -fx-text-fill: tag-text-color;
+}
+
+#studio {
+-fx-text-fill: tag-text-color;
+}
+
+#tags .button {
+    -fx-text-fill: tag-text-color;
+}
+
+
+#selectedTagButton {
+    -fx-background-color: tag-background-color-selected;
+}
+
+
+#unSelectedTagButton {
+    -fx-background-color: tag-background-color;
+}
+
+#unSelectedTagButton:hover {
+    -fx-background-color: tag-background-color-hover;
+}
+
+
+#backgroundImageOverlay {
+     -fx-background-image: url("../../resources/icons/noise.png");
+}
+
+#backgroundCatalogOverlay {
+     -fx-background-image: url("../../resources/icons/noise_light.png");
+}
+
+#headerImage {
+       -fx-background-color: transparent;
+}
+
+
+#recommendedShowMissing {
+    -fx-text-fill: recommended-missing-text-color;
+}
+
+#navigationArrow {
+    -fx-background-color: accent-color;
+}
+
+.showTransparentBackground {
+    -fx-background-color: sidebar-color;
+    -fx-background-image: url("../../resources/icons/noise_light.png");
+}
+
+.mainContainer {
+    -fx-background-color: show-info-background-color;
+        -fx-background-image: url("../../resources/icons/noise_light.png");
+}
+
+.episode-container-light, .episode-container-dark , .episode-container-watching {
+        -fx-background-image: url("../../resources/icons/noise_light.png");
+}
+
+.episode-container-light {
+    -fx-background-color: episode-container-light;
+}
+
+.episode-container-dark {
+    -fx-background-color: episode-container-dark;
+}
+
+.episode-container-watching {
+    -fx-background-color: accent-color;
+}
+
+.episode-container-watching #episode-link {
+    -fx-text-fill: watching-container-link-text-color;
+}
+
+.episode-container-watching #episode-link:hover {
+    -fx-text-fill: watching-container-link-hover-text-color;
+}
+
+
+#episode-link {
+    -fx-text-fill: text-color;
+}
+
+#episode-link:hover {
+    -fx-text-fill: text-color-highlight;
+}
+
+
+
+.summer {
+        -fx-background-repeat: no-repeat;
+    -fx-background-size: 30px 30px;
+    -fx-background-position: 10px 50%;
+        -fx-background-image: url("../../resources/icons/summer.png");
+}
+.winter {
+        -fx-background-image: url("../../resources/icons/winter.png");
+}
+.umi_da {
+        -fx-background-image: url("../../resources/icons/umi_da.png");
+}
+.comiket_summer {
+        -fx-background-image: url("../../resources/icons/comiket_summer.png");
+}
+
+
+.button {
+    -fx-text-fill: text-color;
+}
+
+
+
+.menuContainer {
+    -fx-background-color: accent-color;
+    -fx-background-image: url("../../resources/icons/noise_light.png");
+}
+
+
+.menuContainer .text-field {
+    -fx-background-color: accent-color , white , white;
+}
+
+.menuContainer .text-field:focused {
+    -fx-background-color: accent-color , white , white;
+}
+
+
+.sidebarContainer .button {
+     -fx-background-image: url("../../resources/icons/noise_light.png");
+    -fx-background-color: tag-background-color;
+}
+
+.sidebarContainer .button:hover {
+    -fx-background-color: tag-background-color-hover;
+}
+
+#selectedFolderButton {
+    -fx-text-fill: tag-text-color;
+    -fx-background-color: tag-background-color-selected;
+}
+
+
+#unSelectedFolderButton {
+-fx-text-fill: tag-text-color;
+    -fx-background-color: tag-background-color;
+}
+
+#unSelectedFolderButton:hover{
+-fx-text-fill: tag-text-color;
+    -fx-background-color: tag-background-color-hover;
+}
+
+
+ .scroll-bar:vertical{
+    -fx-background-color: primary-color-dark;
+    -fx-border-color:primary-color-dark;
+}
+
+.scroll-bar:vertical .track{
+     -fx-background-color: primary-color-dark;
+	 -fx-border-color:primary-color-dark;
+}
+
+.scroll-bar:vertical .thumb {
+     -fx-background-color: accent-color-dark;
+ }
+
+.scroll-bar .thumb:pressed{
+   -fx-background-color: accent-color;
+}

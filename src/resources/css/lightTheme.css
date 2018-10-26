@@ -1,0 +1,220 @@
+.root {
+    background-color: #f0c6d0;
+    text-color: #3b3c3d;
+    text-color-highlight: #9b9b9b;
+    primary-color: #ffffff;
+    primary-color-light: #616161;
+    primary-color-dark: #212121;
+    accent-color: #e6567a;
+    accent-color-dark: #b3435f;
+    tag-container-color: #3b3c3d;
+    tag-text-color: #ffffff;
+    tag-background-color: #616161;
+    tag-background-color-hover: #b3435f;
+    tag-background-color-selected: #e6567a;
+    anime-container-text-title-color: #ffffff;
+    sidebar-color: #3b3c3d;
+    sidebar-text-color: ffffff;
+    show-info-background-color: ffffff;
+    show-info-main-container-text-color: #3b3c3d;
+    episode-container-dark: #e6e6e6;
+    episode-container-light: #ffffff;
+    show-container-label-bg-color: #e6567a;
+    show-container-label-text-color: #ffffff;
+    show-container-color: #ffffff;
+    watching-container-link-text-color: #ffffff;
+    watching-container-link-hover-text-color: #c6c4c4;
+    recommended-missing-text-color: #dba2b0;
+}
+
+#showContainerRoot {
+    -fx-background-color: background-color;
+}
+
+#rootContainer {
+    -fx-text-fill: text-color;
+}
+
+#root {
+    -fx-background: background-color;
+}
+
+#showContainer {
+    -fx-background-color: show-container-color;
+}
+
+#showContainerTitle {
+    -fx-background-color: show-container-label-bg-color;
+    -fx-text-fill: show-container-label-text-color;
+}
+
+#genreTagFlowContainer,
+#studioTagFlowContainer {
+    -fx-background-color: tag-container-color;
+}
+
+#genreTagFlowContainer .button,
+#studioTagFlowContainer .button {
+    -fx-text-fill: tag-text-color;
+}
+
+#studio {
+    -fx-text-fill: tag-text-color;
+}
+
+#tags .button {
+    -fx-text-fill: tag-text-color;
+}
+
+
+#selectedTagButton {
+    -fx-background-color: tag-background-color-selected;
+}
+
+
+#unSelectedTagButton {
+    -fx-background-color: tag-background-color;
+}
+
+#unSelectedTagButton:hover {
+    -fx-background-color: tag-background-color-hover;
+}
+
+
+#recommendedShowMissing {
+    -fx-text-fill: recommended-missing-text-color;
+}
+
+#navigationArrow {
+    -fx-background-color: accent-color;
+}
+
+
+#selectedFolderButton {
+    -fx-text-fill: tag-text-color;
+    -fx-background-color: tag-background-color-selected;
+}
+
+
+#unSelectedFolderButton {
+    -fx-text-fill: tag-text-color;
+    -fx-background-color: tag-background-color;
+}
+
+#unSelectedFolderButton:hover {
+    -fx-text-fill: tag-text-color;
+    -fx-background-color: tag-background-color-hover;
+}
+
+#episode-link {
+    -fx-text-fill: text-color;
+}
+
+#episode-link:hover {
+    -fx-text-fill: text-color-highlight;
+}
+
+
+.mainContainer .label {
+    -fx-text-fill: show-info-main-container-text-color;
+}
+
+.sidebarContainer .label {
+    -fx-text-fill: sidebar-text-color;
+}
+
+.showTitle {
+    -fx-fill: text-color;
+}
+
+.button {
+    -fx-text-fill: text-color;
+}
+
+.menuContainer .text-field {
+    -fx-background-color: accent-color, white, white;
+}
+
+.menuContainer .text-field:focused {
+    -fx-background-color: accent-color, white, white;
+}
+
+
+.showTransparentBackground {
+    -fx-background-color: sidebar-color;
+}
+
+.mainContainer {
+    -fx-background-color: show-info-background-color;
+}
+
+.episode-container-light {
+    -fx-background-color: episode-container-light;
+}
+
+.episode-container-dark {
+    -fx-background-color: episode-container-dark;
+}
+
+.episode-container-watching {
+    -fx-background-color: accent-color;
+}
+
+.episode-container-watching #episode-link {
+    -fx-text-fill: watching-container-link-text-color;
+}
+
+.episode-container-watching #episode-link:hover {
+    -fx-text-fill: watching-container-link-hover-text-color;
+}
+
+.summer {
+    -fx-background-image: url("../../resources/Icons/summer_d.png");
+}
+
+.winter {
+    -fx-background-image: url("../../resources/Icons/winter_d.png");
+}
+
+.umi_da {
+    -fx-background-image: url("../../resources/Icons/umi_da_d.png");
+}
+
+.comiket_summer {
+    -fx-background-image: url("../../resources/Icons/comiket_summer_d.png");
+}
+
+
+.button {
+    -fx-text-fill: text-color;
+}
+
+.menuContainer {
+    -fx-background-color: accent-color-dark;
+}
+
+.sidebarContainer .button {
+    -fx-background-color: tag-background-color;
+}
+
+.sidebarContainer .button:hover {
+    -fx-background-color: tag-background-color-hover;
+}
+
+.scroll-bar:vertical {
+    -fx-background-color: primary-color-dark;
+    -fx-border-color: primary-color-dark;
+}
+
+.scroll-bar:vertical .track {
+    -fx-background-color: primary-color-dark;
+    -fx-border-color: primary-color-dark;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: accent-color-dark;
+}
+
+.scroll-bar .thumb:pressed {
+    -fx-background-color: accent-color;
+}

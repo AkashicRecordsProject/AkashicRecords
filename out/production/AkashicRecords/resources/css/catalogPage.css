@@ -1,0 +1,186 @@
+.root {
+        background-color: #000;
+        text-color:#ffffff;
+        text-color-highlight:#9b9b9b;
+        primary-color:#424242;
+        primary-color-light:#616161;
+        primary-color-dark:#212121;
+        accent-color: #7C6590;
+        accent-color-dark: #564664;
+        tag-container-color: #212121;
+        tag-text-color: #ffffff;
+        tag-background-color: #424242;
+        tag-background-color-hover: #564664;
+        tag-background-color-selected: #7C6590;
+        anime-container-text-title-color: #ffffff;
+        sidebar-color: #46423bec;
+        episode-container-dark: #333333;
+        episode-container-light: #454545;
+        show-container-label-bg-color: #f8cac1;
+        show-container-label-text-color: #3b3c3d;
+        show-container-color: #424242;
+}
+
+
+#backgroundImage, #headerImage {
+
+    -fx-background-color: background-color;
+    -fx-background-repeat: no-repeat no-repeat;
+    -fx-background-position: center 0;
+
+}
+
+#showContainerRoot {
+    -fx-background-color: show-container-color;
+
+}
+
+#rootContainer {
+    -fx-font-family: "Roboto Light";
+    -fx-font-size: 20;
+    -fx-text-fill: text-color;
+}
+
+
+#showContainerTitle {
+    -fx-background-color: primary-color-light;
+    -fx-font-size: 50;
+    -fx-text-fill: text-color;
+    -fx-width: 100%;
+}
+
+.showTitle {
+
+    -fx-font-family: "Roboto Light";
+    -fx-font-size: 15;
+    -fx-text-alignment: center;
+    -fx-font-smoothing-type: lcd;
+    -fx-fill: text-color;
+
+}
+
+.image-view {
+    -fx-opacity: 0.85;
+}
+
+
+.image-view:hover {
+    -fx-opacity: 1;
+}
+
+.menuContainer {
+    -fx-background-color: accent-color-dark;
+}
+
+.menuContainer .image-view:hover {
+ -fx-opacity: 0.5;
+}
+
+#genreTagFlowContainer , #studioTagFlowContainer{
+    -fx-background-color: tag-container-color;
+}
+
+
+.button {
+    -fx-background-radius: 6px;
+    -fx-text-fill: text-color;
+    -fx-font-size: 15;
+}
+
+.button:hover {
+        -fx-cursor: HAND;
+}
+
+#selectedTagButton {
+    -fx-background-color: tag-background-color-selected;
+}
+
+
+#unSelectedTagButton {
+    -fx-background-color: tag-background-color;
+}
+
+#unSelectedTagButton:hover {
+    -fx-background-color: tag-background-color-hover;
+}
+
+#showCover {
+    -fx-scale-x: 1;
+    -fx-scale-y: 1;
+}
+
+#showCover:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 11, 0, 0, 2);
+    -fx-scale-x: 1.05;
+     -fx-scale-y: 1.05;
+    -fx-cursor: HAND;
+}
+
+#navigationArrow {
+     -fx-background-color: accent-color;
+     -fx-background-image: url("../../resources/icons/arrow_down.png");
+     -fx-background-position: center;
+     -fx-background-repeat: no-repeat no-repeat;
+     -fx-background-size: 50 50;
+     -fx-background-radius: 40px;
+ }
+
+ .scroll-bar:vertical{
+    -fx-background-color: primary-color-dark;
+     -fx-pref-width: 10;
+             	 -fx-border-color:primary-color-dark;
+}
+
+.scroll-bar:vertical .track{
+     -fx-background-color: primary-color-dark;
+	 -fx-border-color:primary-color-dark;
+	 -fx-background-radius: 90em;
+}
+
+.scroll-bar:vertical .thumb {
+     -fx-background-color: accent-color-dark;
+ 	-fx-background-insets: 0, 0, 0;
+ 	-fx-background-radius: 90em;
+
+ }
+
+ .scroll-bar:vertical:pressed .track{
+  	 -fx-background-radius: 90em;
+
+  }
+
+  .scroll-bar .thumb:pressed{
+       -fx-background-color: accent-color;
+   }
+
+    .scroll-bar .increment-arrow {
+        visibility: hidden;
+    }
+
+   .scroll-bar .increment-button {
+        visibility: hidden;
+
+    }
+
+    .scroll-bar .decrement-arrow {
+        visibility: hidden;
+    }
+
+   .scroll-bar .decrement-button {
+        visibility: hidden;
+
+    }
+
+    .text-field {
+     	-fx-background-radius: 45em;
+        -fx-background-color: accent-color , white , white;
+    -fx-background-insets: 0 -1 -1 -1, 0 0 0 0, 0 -1 3 -1;
+
+
+    }
+
+    .text-field:focused {
+        -fx-background-color: accent-color , white , white;
+       -fx-background-insets: 0 -1 -1 -1, 0 0 0 0, 0 -1 3 -1;
+
+    }

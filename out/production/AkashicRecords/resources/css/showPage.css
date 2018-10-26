@@ -1,0 +1,222 @@
+.root {
+    background-color: #000;
+    text-color: #fff;
+    text-color-highlight: #9b9b9b;
+    primary-color: #424242;
+    primary-color-light: #616161;
+    primary-color-dark: #212121;
+    accent-color: #7C6590;
+    accent-color-dark: #564664;
+    tag-text-color: #ffffff;
+    tag-background-color: #424242;
+    tag-background-color-hover: #7C6590;
+    anime-container-text-title-color: #ffffff;
+    sidebar-color: rgba(46, 46, 46, .85);
+    episode-container-dark: #333333;
+    episode-container-light: #454545;
+    show-info-background-color: #424242;
+    recommended-missing-text-color: #ab9aba;
+    show-container-label-bg-color: #ffffff;
+    show-container-label-text-color: #ffffff;
+    show-container-color: #ffffff;
+}
+
+#showContainerRoot {
+    -fx-background-color: background-color;
+}
+
+#rootContainer {
+    -fx-font-family: "Roboto Light";
+    -fx-font-size: 20;
+    -fx-text-fill: text-color;
+}
+
+#root {
+    -fx-background: background-color;
+}
+
+#showContainer {
+    -fx-background-color: show-container-color;
+}
+
+#showContainerTitle {
+    -fx-background-color: show-container-label-bg-color;
+    -fx-text-fill: show-container-label-text-color;
+}
+
+#title,
+#date,
+#rating,
+#ageRating {
+    -fx-font-family: "Roboto Bold";
+    -fx-font-weight: bold;
+}
+
+#recommendedShow {
+    -fx-text-fill: tag-text-color;
+}
+
+#recommendedShowMissing {
+    -fx-text-fill: recommended-missing-text-color;
+}
+
+#navigationArrow {
+    -fx-background-color: accent-color;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat no-repeat;
+    -fx-background-size: 50 50;
+    -fx-background-radius: 40px;
+    -fx-background-image: url("../../resources/icons/arrow_down.png");
+}
+
+#episode-link {
+    -fx-text-fill: text-color;
+}
+
+#episode-link:hover {
+    -fx-text-fill: text-color-highlight;
+    -fx-cursor: HAND;
+}
+
+#mainTitle {
+    -fx-font-family: "MS MINCHO";
+    -fx-font-size: 70;
+    -fx-font-weight: bold;
+}
+
+#selectedFolderButton {
+    -fx-background-color: accent-color;
+}
+
+
+#unSelectedFolderButton {
+    -fx-background-color: primary-color-dark;
+}
+
+#unSelectedFolderButton:hover {
+    -fx-background-color: accent-color-dark;
+}
+
+
+.button {
+    -fx-background-radius: 6px;
+    -fx-text-fill: text-color;
+    -fx-font-size: 15;
+}
+
+.button:hover {
+    -fx-cursor: HAND;
+}
+
+.menuContainer {
+    -fx-background-color: accent-color-dark;
+}
+
+
+.sidebarContainer .button {
+    -fx-background-color: tag-background-color;
+}
+
+.sidebarContainer .button:hover {
+    -fx-background-color: tag-background-color-hover;
+}
+
+
+.menuContainer .image-view:hover {
+    -fx-opacity: 0.5;
+}
+
+.sidebarContainer {
+    -fx-font-size: 15;
+}
+
+.sidebarContainer .label {
+    -fx-font-family: "Roboto Light";
+    -fx-font-size: 15;
+}
+
+.episode-container-icons {
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 30px 30px;
+    -fx-background-position: 10px 50%;
+}
+
+.showTransparentBackground {
+    -fx-background-color: sidebar-color;
+}
+
+.mainContainer {
+    -fx-background-color: show-info-background-color;
+}
+
+
+.episode-container-light {
+    -fx-background-color: episode-container-light;
+}
+
+.episode-container-dark {
+    -fx-background-color: episode-container-dark;
+}
+
+.episode-container-watching {
+    -fx-background-color: accent-color;
+}
+
+
+.summer {
+    -fx-background-image: url("../../resources/Icons/summer.png");
+}
+
+.winter {
+    -fx-background-image: url("../../resources/Icons/winter.png");
+}
+
+.umi_da {
+    -fx-background-image: url("../../resources/Icons/umi_da.png");
+}
+
+.comiket_summer {
+    -fx-background-image: url("../../resources/Icons/comiket_summer.png");
+}
+
+.scroll-bar:vertical {
+    -fx-background-color: primary-color-dark;
+    -fx-pref-width: 10;
+    -fx-border-color: primary-color-dark;
+}
+
+.scroll-bar:vertical .track {
+    -fx-background-color: primary-color-dark;
+    -fx-border-color: primary-color-dark;
+    -fx-background-radius: 90em;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: accent-color-dark;
+    -fx-background-insets: 0, 0, 0;
+    -fx-background-radius: 90em;
+}
+
+.scroll-bar:vertical:pressed .track {
+    -fx-background-radius: 90em;
+}
+
+.scroll-bar .thumb:pressed {
+    -fx-background-color: accent-color;
+}
+
+.scroll-bar .increment-arrow {
+    visibility: hidden;
+}
+
+.scroll-bar .increment-button {
+    visibility: hidden;
+}
+
+.scroll-bar .decrement-arrow {
+    visibility: hidden;
+}
+
+.scroll-bar .decrement-button {
+    visibility: hidden;
+}

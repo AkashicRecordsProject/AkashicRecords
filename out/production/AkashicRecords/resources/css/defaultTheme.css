@@ -1,0 +1,45 @@
+.root {
+    background-color: #000;
+    text-color: #fff;
+    text-color-highlight: #9b9b9b;
+    primary-color: #424242;
+    primary-color-light: #616161;
+    primary-color-dark: #212121;
+    accent-color: #7C6590;
+    accent-color-dark: #564664;
+    tag-text-color: #ffffff;
+    tag-background-color: #424242;
+    tag-background-color-hover: #7C6590;
+    anime-container-text-title-color: #ffffff;
+    sidebar-color: rgba(46, 46, 46, .85);
+    episode-container-dark: #333333;
+    episode-container-light: #454545;
+    show-info-background-color: #424242;
+    recommended-missing-text-color: #ab9aba;
+    show-container-label-bg-color: #564664;
+    show-container-label-text-color: #ffffff;
+    show-container-color: #212121;
+}
+
+#showContainerRoot {
+    -fx-background-color: background-color;
+}
+
+#rootContainer {
+    -fx-font-family: "Roboto Light";
+    -fx-font-size: 20;
+    -fx-text-fill: text-color;
+}
+
+#root {
+    -fx-background: background-color;
+}
+
+#showContainer {
+    -fx-background-color: show-container-color;
+}
+
+#showContainerTitle {
+    -fx-background-color: show-container-label-bg-color;
+    -fx-text-fill: show-container-label-text-color;
+}

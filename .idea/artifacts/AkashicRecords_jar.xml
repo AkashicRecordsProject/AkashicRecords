@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="AkashicRecords:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/AkashicRecords_jar</output-path>
+    <root id="archive" name="AkashicRecords.jar">
+      <element id="module-output" name="AkashicRecords" />
+      <element id="extracted-dir" path="$USER_HOME$/Jars/gson-2.3.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Jars/jsoup-1.9.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Jars/imgscalr-lib-4.2.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
