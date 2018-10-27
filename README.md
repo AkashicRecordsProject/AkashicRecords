@@ -31,13 +31,13 @@ Settings.json multiple anime folders with network paths example:<br />
     {<br />
       "localFolder": "/home/user/Desktop/Anime_1/",<br />
       "linuxNetworkFolder": "/home/user/Desktop/Anime_1",<br />
-      "windowsNetworkFolder": "\\\\USER\\Anime_1\\",<br />
+      "windowsNetworkFolder": "\\\\\\\\USER\\\\Anime_1\\\\",<br />
       "macNetworkFolder": "////Volumes/Anime_1/"<br />
     },<br />
       {<br />
       "localFolder": "/home/user/Desktop/Anime_2/",<br />
       "linuxNetworkFolder": "/home/user/Desktop/Anime_2",<br />
-      "windowsNetworkFolder": "\\\\USER\\Anime_2\\",<br />
+      "windowsNetworkFolder": "\\\\\\\\USER\\\\Anime_2\\\\",<br />
       "macNetworkFolder": "////Volumes/Anime_2/"<br />
     }<br />
   ]<br />
