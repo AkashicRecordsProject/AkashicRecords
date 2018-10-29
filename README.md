@@ -1,6 +1,9 @@
 # AkashicRecords
 AkashicRecords is a cross platform anime file manager.
 
+Demo
+https://youtu.be/PXd8I1cfx6Q
+
 Instructions<br/>
 1) Download https://drive.google.com/file/d/1b6OXSb9LjtvLPJSXG_I5Nr7e8MNOoRls/view?usp=sharing<br />
 2) Run AkashicRecords.jar<br />
