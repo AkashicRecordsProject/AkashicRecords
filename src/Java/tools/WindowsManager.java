@@ -76,13 +76,13 @@ public class WindowsManager {
         }
     }
 
-    public static void refreshScene(Stage stage, String layout) {
-        refreshScene(stage, layout, sceneHistories.get(getCurrentScreenPosition()).getTitle());
-    }
 
-    public static void refreshScene(Stage stage, String layout, String title) {
+    public static void refreshScene(Stage stage, String layout, String title, boolean removeParam) {
 
         try {
+            if(removeParam)
+                windowParams = "";
+
             Parent showPageRoot = FXMLLoader.load(Main.class.getResource(ProjectPaths.JAR_LAYOUTS_FOLDER_PATH + layout));
             Scene scene = new Scene(showPageRoot, stage.getWidth(), stage.getHeight());
             stage.setScene(scene);

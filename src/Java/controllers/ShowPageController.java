@@ -411,12 +411,12 @@ public class ShowPageController implements Initializable {
 
         menuUpdate.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> Platform.runLater(() ->
                 ShowInfoCreator.updateJsonForShow(showInfo, () ->
-                        WindowsManager.refreshScene((Stage) root.getScene().getWindow(), Strings.LAYOUT_SHOW, showInfo.getTitle()))));
+                        WindowsManager.refreshScene((Stage) root.getScene().getWindow(), Strings.LAYOUT_SHOW, showInfo.getTitle(), false))));
 
         root.addEventHandler(KeyEvent.KEY_PRESSED, keyEvent -> {
 
             if (KeyboardShortcuts.REFRESH.match(keyEvent) || KeyboardShortcuts.REFRESH_ALTERNATIVE.match(keyEvent)) {
-                WindowsManager.refreshScene((Stage) root.getScene().getWindow(), Strings.LAYOUT_SHOW);
+                WindowsManager.refreshScene((Stage) root.getScene().getWindow(), Strings.LAYOUT_SHOW, showInfo.getTitle(), false);
             } else if (KeyboardShortcuts.CHANGE_THEME.match(keyEvent)) {
 
                 root.getStylesheets().remove(ProjectPaths.JAR_CSS_FOLDER_PATH + user.getThemeName(true));

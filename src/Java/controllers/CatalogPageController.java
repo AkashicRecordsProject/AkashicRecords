@@ -231,11 +231,11 @@ public class CatalogPageController implements Initializable {
         root.addEventHandler(KeyEvent.KEY_RELEASED, (KeyEvent keyEvent) -> isCtrlHeld = false);
 
 
-        menuAll.setOnMouseClicked(event -> WindowsManager.refreshScene((Stage) root.getScene().getWindow(), Strings.LAYOUT_SHOW_CATALOG, Strings.APP_NAME));
+        menuAll.setOnMouseClicked(event -> WindowsManager.refreshScene((Stage) root.getScene().getWindow(), Strings.LAYOUT_SHOW_CATALOG, Strings.APP_NAME, true));
 
         menuUpdate.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> Platform.runLater(() ->
                 ShowInfoCreator.updateJsonForAllShows(() ->
-                        WindowsManager.refreshScene((Stage) root.getScene().getWindow(), Strings.LAYOUT_SHOW_CATALOG, Strings.APP_NAME))));
+                        WindowsManager.refreshScene((Stage) root.getScene().getWindow(), Strings.LAYOUT_SHOW_CATALOG, Strings.APP_NAME, true))));
 
 
         menuStudioTag.setOnMouseClicked(event -> {
@@ -305,7 +305,7 @@ public class CatalogPageController implements Initializable {
                     }
                 }
             } else if (KeyboardShortcuts.REFRESH.match(keyEvent) || KeyboardShortcuts.REFRESH_ALTERNATIVE.match(keyEvent)) {
-                WindowsManager.refreshScene((Stage) root.getScene().getWindow(), Strings.LAYOUT_SHOW_CATALOG, Strings.APP_NAME);
+                WindowsManager.refreshScene((Stage) root.getScene().getWindow(), Strings.LAYOUT_SHOW_CATALOG, Strings.APP_NAME, true);
             } else if (KeyboardShortcuts.SORT.match(keyEvent)) {
                 currentSort = SORT.values()[(currentSort.ordinal() + 1) % SORT.values().length];
                 sortContainer(currentSort);
